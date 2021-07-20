@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --accent-color: #2196f3;
   --primary-color: #212121;
@@ -91,10 +90,6 @@ body {
   display: flex;
 }
 
-.main-nav {
-  display: flex;
-}
-
 .menu-nav {
   display: flex;
   font-weight: 500;
@@ -112,10 +107,10 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-nav .link:hover,
-.menu-nav .link:focus {
+.menu-nav .link:hover, .menu-nav .link:focus {
   color: var(--accent-color);
 }
 
@@ -125,10 +120,6 @@ body {
 
 .menu-link {
   position: relative;
-}
-
-.menu-nav .link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-item::after {
@@ -169,14 +160,17 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-contact:hover,
-.menu-contact:focus {
+.menu-contact:hover, .menu-contact:focus {
   color: var(--accent-color);
 }
 
 .envelope-icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.main-nav {
+  display: flex;
 }
 
 .main-head {
@@ -209,7 +203,6 @@ body {
   color: var(--third-color);
 }
 
-/*-------------------- Оформление кнопки "Заказать услугу" -----------------*/
 .hero-button {
   padding: 10px 32px;
   font-weight: 700;
@@ -226,8 +219,7 @@ body {
   cursor: pointer;
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.hero-button:hover, .hero-button:focus {
   background: #188ce8;
 }
 
@@ -243,7 +235,7 @@ body {
   margin-left: 30px;
 }
 
-.feature-container {
+.features-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,17 +262,26 @@ body {
   color: var(--secondary-color);
 }
 
+.worklist {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
 .worklist-section {
   padding-top: 0;
+}
+
+.worklist-wrapper {
+  position: relative;
 }
 
 .main-worklist {
   display: flex;
   justify-content: space-between;
-}
-
-.worklist-wrapper {
-  position: relative;
 }
 
 .main-worklist-desc {
@@ -299,15 +300,6 @@ body {
   text-transform: uppercase;
   background-color: rgba(47, 48, 58, 0.8);
   color: var(--third-color);
-}
-
-.worklist {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .team-section {
@@ -421,8 +413,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customers-link:hover,
-.customers-link:focus {
+.customers-link:hover, .customers-link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -478,8 +469,7 @@ body {
   cursor: pointer;
 }
 
-.close-button:focus,
-.close-button:hover {
+.close-button:focus, .close-button:hover {
   fill: var(--accent-color);
 }
 
@@ -524,17 +514,8 @@ body {
   cursor: pointer;
 }
 
-.form-input:focus,
-.form-input:hover {
+.form-input:focus, .form-input:hover {
   border-color: var(--accent-color);
-}
-
-.form-input:focus + .form-icon-svg {
-  fill: var(--accent-color);
-}
-
-.form-input:hover + .form-icon-svg {
-  fill: var(--accent-color);
 }
 
 .form-icon-svg {
@@ -544,6 +525,14 @@ body {
   left: 12px;
   display: block;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .form-icon-svg {
+  fill: var(--accent-color);
+}
+
+.form-input:hover + .form-icon-svg {
+  fill: var(--accent-color);
 }
 
 .modal-form-comment {
@@ -559,8 +548,7 @@ body {
   outline: none;
 }
 
-.modal-form-comment:hover,
-.modal-form-comment:focus {
+.modal-form-comment:hover, .modal-form-comment:focus {
   border-color: var(--accent-color);
 }
 
@@ -632,8 +620,7 @@ body {
   cursor: pointer;
 }
 
-.modal-form-btn:hover,
-.modal-form-btn:focus {
+.modal-form-btn:hover, .modal-form-btn:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background: #188ce8;
 }
@@ -663,8 +650,7 @@ body {
   cursor: pointer;
 }
 
-.filter-btn:hover,
-.filter-btn:focus {
+.filter-btn:hover, .filter-btn:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   color: var(--third-color);
   background-color: var(--accent-color);
@@ -697,27 +683,6 @@ body {
   overflow: hidden;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  overflow: auto;
-  width: 100%;
-  height: 100%;
-  padding: 63px 24px;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  color: var(--third-color);
-  background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.worklist-link:hover .overlay,
-.worklist-link:focus .overlay {
-  transform: translateY(0%);
-}
-
 .worklist-head {
   font-weight: 700;
   font-size: 18px;
@@ -740,6 +705,27 @@ body {
   border-left: 1px solid #eeeeee;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--third-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.worklist-link:hover .overlay,
+.worklist-link:focus .overlay {
+  transform: translateY(0%);
+}
+
 .footer-section {
   padding: 60px 0;
   background-color: var(--fourth-color);
@@ -754,7 +740,6 @@ body {
   margin-right: 70px;
 }
 
-/* ------ Логотип в футере ------- */
 .footer-logo {
   display: inline-block;
   margin-bottom: 20px;
@@ -766,7 +751,6 @@ body {
   color: var(--third-color);
 }
 
-/* ------контакты в футере --------- */
 .address-link {
   font-size: 14px;
   line-height: 1.71;
@@ -787,16 +771,15 @@ body {
   font-style: inherit;
 }
 
-.footer-contact .item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
 .footer-address .link:hover,
 .footer-address .link:focus {
   color: var(--accent-color);
 }
 
-/* ------ Ссылки на соц.сети----------- */
+.footer-contact .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .footer-icon-head {
   margin-bottom: 20px;
   font-weight: 700;
@@ -827,8 +810,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-icon-link:hover,
-.footer-icon-link:focus {
+.footer-icon-link:hover, .footer-icon-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -836,7 +818,6 @@ body {
   fill: currentColor;
 }
 
-/* ------------------------Подписка на рассылку--------------------------------- */
 .footer-subscribe {
   margin-left: 93px;
 }
@@ -894,8 +875,7 @@ body {
   cursor: pointer;
 }
 
-.btn-subscribe:hover,
-.btn-subscribe:focus {
+.btn-subscribe:hover, .btn-subscribe:focus {
   background: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }

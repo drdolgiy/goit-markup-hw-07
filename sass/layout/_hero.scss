@@ -33,7 +33,6 @@
   color: var(--third-color);
 }
 
-/*-------------------- Оформление кнопки "Заказать услугу" -----------------*/
 .hero-button {
   padding: 10px 32px;
 
@@ -53,9 +52,9 @@
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   cursor: pointer;
-}
 
-.hero-button:hover,
-.hero-button:focus {
-  background: #188ce8;
+  &:hover,
+  &:focus {
+    background: #188ce8;
+  }
 }
