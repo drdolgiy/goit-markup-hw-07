@@ -27,5 +27,17 @@
 // CUSTOMERS
 @import "./layout/customers";
 
-// FOOTER
-@import "./layout/footer.scss";
+// BACKDROP
+@import "./components/backdrop";
+
+// MODAL
+@import "./layout/modal";
+
+// WORKLIST-FILTER
+@import "./layout/worklist-filter";
+
+// WORKLIST-GALLERY
+@import "./layout/worklist-gallery";
+
+//FOOTER
+@import "./layout/footer";
