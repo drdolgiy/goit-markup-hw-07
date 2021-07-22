@@ -86,11 +86,19 @@ body {
   color: var(--accent-color);
 }
 
-.header-container {
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header__container {
   display: flex;
 }
 
-.menu-nav {
+.main-nav {
+  display: flex;
+}
+
+.menu {
   display: flex;
   font-weight: 500;
   font-size: 14px;
@@ -99,30 +107,30 @@ body {
   color: var(--primary-color);
 }
 
-.menu-nav .item:not(:last-child) {
+.menu .item:not(:last-child) {
   margin-right: 50px;
 }
 
-.menu-nav .link {
+.menu .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-nav .link:hover, .menu-nav .link:focus {
+.menu .link:hover, .menu .link:focus {
   color: var(--accent-color);
 }
 
-.menu-nav .link.current {
+.menu .link.current {
   color: var(--accent-color);
 }
 
-.menu-link {
+.menu__link {
   position: relative;
 }
 
-.menu-item::after {
+.menu__item::after {
   position: absolute;
   content: "";
   left: 0;
@@ -147,7 +155,7 @@ body {
   margin-right: 30px;
 }
 
-.menu-contact {
+.contact {
   display: flex;
   align-items: center;
   margin: 0;
@@ -160,21 +168,13 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-contact:hover, .menu-contact:focus {
+.contact:hover, .contact:focus {
   color: var(--accent-color);
 }
 
-.envelope-icon {
+.contact__icon {
   margin-right: 10px;
   fill: currentColor;
-}
-
-.main-nav {
-  display: flex;
-}
-
-.main-head {
-  border-bottom: 1px solid #ececec;
 }
 
 .hero {
@@ -193,7 +193,7 @@ body {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_img.jpg);
 }
 
-.hero-head {
+.hero__header {
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
@@ -235,7 +235,7 @@ body {
   margin-left: 30px;
 }
 
-.features-container {
+.features-list__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -246,7 +246,7 @@ body {
   background: var(--button-color);
 }
 
-.features-head {
+.features-list__head {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -255,7 +255,7 @@ body {
   text-transform: uppercase;
 }
 
-.features-text {
+.features-list__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -263,6 +263,10 @@ body {
 }
 
 .worklist {
+  padding-top: 0;
+}
+
+.worklist__header {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -271,20 +275,16 @@ body {
   letter-spacing: 0.03em;
 }
 
-.worklist-section {
-  padding-top: 0;
-}
-
-.worklist-wrapper {
-  position: relative;
-}
-
 .main-worklist {
   display: flex;
   justify-content: space-between;
 }
 
-.main-worklist-desc {
+.main-worklist__wrapper {
+  position: relative;
+}
+
+.main-worklist__desc {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -302,11 +302,11 @@ body {
   color: var(--third-color);
 }
 
-.team-section {
+.team {
   background-color: #f5f4fa;
 }
 
-.team {
+.team__header {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -320,18 +320,18 @@ body {
   margin-left: -30px;
 }
 
-.team-list-item {
+.team-item {
   margin-left: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--third-color);
 }
 
-.team-img {
+.team-item__img {
   margin-bottom: 30px;
 }
 
-.name {
+.team-item__name {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -340,7 +340,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.profession {
+.team-item__profession {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
@@ -349,17 +349,7 @@ body {
   color: var(--secondary-color);
 }
 
-.team-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.team-container .item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.social-link {
+.link-wrapper__social-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -371,17 +361,26 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link:hover,
-.social-link:focus {
+.link-wrapper__social-link:hover, .link-wrapper__social-link:focus {
   color: var(--third-color);
   background-color: var(--accent-color);
 }
 
-.social-icon {
+.link-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.link-wrapper .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.link-wrapper__social-icon {
   fill: currentColor;
 }
 
-.customers-head {
+.customers-section__head {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -396,11 +395,11 @@ body {
   justify-content: center;
 }
 
-.customers-list:not(:last-child) {
+.customers__list:not(:last-child) {
   margin-right: 30px;
 }
 
-.customers-link {
+.customers__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -413,12 +412,12 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customers-link:hover, .customers-link:focus {
+.customers__link:hover, .customers__link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.customers-icon {
+.customers__icon {
   fill: currentColor;
 }
 
@@ -478,7 +477,7 @@ body {
   flex-direction: column;
 }
 
-.head-modal-form {
+.modal-form__head {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
@@ -488,7 +487,7 @@ body {
   color: var(--primary-color);
 }
 
-.modal-form-label {
+.label {
   position: relative;
   margin-bottom: 20px;
   font-size: 12px;
@@ -497,13 +496,13 @@ body {
   color: var(--secondary-color);
 }
 
-.form-icon-position {
+.label__position {
   position: relative;
   margin-top: 4px;
   display: block;
 }
 
-.form-input {
+.label__input {
   width: 100%;
   height: 40px;
   padding-left: 42px;
@@ -514,11 +513,11 @@ body {
   cursor: pointer;
 }
 
-.form-input:focus, .form-input:hover {
+.label__input:focus, .label__input:hover {
   border-color: var(--accent-color);
 }
 
-.form-icon-svg {
+.label__icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -527,15 +526,15 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus + .form-icon-svg {
+.label__input:focus + .label__icon {
   fill: var(--accent-color);
 }
 
-.form-input:hover + .form-icon-svg {
+.label__input:hover + .label__icon {
   fill: var(--accent-color);
 }
 
-.modal-form-comment {
+.label__comment {
   display: inline-block;
   width: 100%;
   height: 120px;
@@ -548,22 +547,22 @@ body {
   outline: none;
 }
 
-.modal-form-comment:hover, .modal-form-comment:focus {
+.label__comment:hover, .label__comment:focus {
   border-color: var(--accent-color);
 }
 
-.modal-form-comment::placeholder {
+.label__comment::placeholder {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox-wrapper {
+.checkbox {
   margin-bottom: 30px;
 }
 
-.modal-form-checkbox-label {
+.checkbox__label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -574,7 +573,7 @@ body {
   cursor: pointer;
 }
 
-.modal-form-checkbox-label::before {
+.checkbox__label::before {
   content: "";
   display: block;
   width: 16px;
@@ -584,7 +583,7 @@ body {
   border-radius: 2px;
 }
 
-.modal-form-checkbox:checked + .modal-form-checkbox-label::before {
+.checkbox__input:checked + .checkbox__label::before {
   background-image: url(../images/vector.svg);
   border-color: var(--accent-color);
   background-size: contain;
@@ -592,15 +591,15 @@ body {
   background-color: var(--accent-color);
 }
 
-.modal-form-checkbox:focus + .modal-form-checkbox-label::before {
+.checkbox__input:focus + .checkbox__label::before {
   outline: 2px solid var(--accent-color);
 }
 
-.modal-form-checkbox-label a {
+.checkbox__label a {
   color: var(--accent-color);
 }
 
-.modal-form-btn {
+.modal-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -620,7 +619,7 @@ body {
   cursor: pointer;
 }
 
-.modal-form-btn:hover, .modal-form-btn:focus {
+.modal-button:hover, .modal-button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background: #188ce8;
 }

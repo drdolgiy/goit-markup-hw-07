@@ -1,8 +1,16 @@
-.header-container {
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header__container {
   display: flex;
 }
 
-.menu-nav {
+.main-nav {
+  display: flex;
+}
+
+.menu {
   display: flex;
 
   font-weight: 500;
@@ -34,11 +42,11 @@
   }
 }
 
-.menu-link {
+.menu__link {
   position: relative;
 }
 
-.menu-item::after {
+.menu__item::after {
   position: absolute;
   content: "";
   left: 0;
@@ -65,7 +73,7 @@
   }
 }
 
-.menu-contact {
+.contact {
   display: flex;
   align-items: center;
   margin: 0;
@@ -86,15 +94,7 @@
   }
 }
 
-.envelope-icon {
+.contact__icon {
   margin-right: 10px;
   fill: currentColor;
-}
-
-.main-nav {
-  display: flex;
-}
-
-.main-head {
-  border-bottom: 1px solid #ececec;
 }
