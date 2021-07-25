@@ -1,4 +1,4 @@
-.footer-section {
+.footer {
   padding: 60px 0;
 
   background-color: var(--fourth-color);
@@ -13,20 +13,7 @@
   margin-right: 70px;
 }
 
-.footer-logo {
-  display: inline-block;
-  margin-bottom: 20px;
-
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-
-  color: var(--third-color);
-}
-
-.address-link {
+.footer-contact__address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -35,7 +22,7 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-link {
+.footer-contact__list {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -44,7 +31,7 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-address {
+.address {
   font-style: inherit;
 
   .link:hover,
@@ -57,7 +44,7 @@
   margin-bottom: 9px;
 }
 
-.footer-icon-head {
+.footer-social__header {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -69,15 +56,19 @@
   color: var(--third-color);
 }
 
-.footer-social-icon-list {
+.footer-social-list {
   display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
 }
 
-.footer-icon-list:not(:last-child) {
-  margin-right: 10px;
-}
-
-.footer-icon-link {
+.footer-social-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,31 +89,27 @@
   }
 }
 
-.footer-social-icon {
-  fill: currentColor;
-}
-
-.footer-subscribe {
+.subscribe {
   margin-left: 93px;
+
+  &__header {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--third-color);
+  }
 }
 
-.head-subscribe {
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-
-  color: var(--third-color);
-}
-
-.form-subscribe {
+.subscribe-form {
   display: flex;
   align-items: center;
 }
 
-.input-subscribe {
+.subscribe__input {
   padding-left: 16px;
   margin-right: 12px;
 
@@ -145,7 +132,7 @@
   }
 }
 
-.btn-subscribe {
+.subscribe-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,8 +159,8 @@
     background: #188ce8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
-}
 
-.icon-subscribe {
-  margin-left: 10px;
+  &__icon {
+    margin-left: 10px;
+  }
 }

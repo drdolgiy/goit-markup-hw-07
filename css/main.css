@@ -70,7 +70,7 @@ body {
   padding-right: 15px;
 }
 
-.logo {
+.header__logo {
   margin-top: 24px;
   margin-bottom: 25px;
   margin-right: 93px;
@@ -80,6 +80,17 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #000000;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--third-color);
 }
 
 .logo-color {
@@ -235,7 +246,7 @@ body {
   margin-left: 30px;
 }
 
-.features-list__container {
+.features-list__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -349,7 +360,7 @@ body {
   color: var(--secondary-color);
 }
 
-.link-wrapper__social-link {
+.team-link__social-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -361,22 +372,22 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-wrapper__social-link:hover, .link-wrapper__social-link:focus {
+.team-link__social-link:hover, .team-link__social-link:focus {
   color: var(--third-color);
   background-color: var(--accent-color);
 }
 
-.link-wrapper {
+.team-link {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.link-wrapper .item:not(:last-child) {
+.team-link .item:not(:last-child) {
   margin-right: 10px;
 }
 
-.link-wrapper__social-icon {
+.team-link__social-icon {
   fill: currentColor;
 }
 
@@ -662,18 +673,18 @@ body {
   margin-left: -30px;
 }
 
-.worklist-item {
+.worklist-gallery__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
   margin-left: 30px;
 }
 
-.worklist-link {
+.worklist-gallery__link {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.worklist-link:hover {
+.worklist-gallery__link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -682,29 +693,7 @@ body {
   overflow: hidden;
 }
 
-.worklist-head {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--primary-color);
-}
-
-.worklist-desc {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: var(--secondary-color);
-}
-
-.worklist-border {
-  padding: 20px 24px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-}
-
-.overlay {
+.worklist-wrapper__overlay {
   position: absolute;
   top: 0;
   overflow: auto;
@@ -720,12 +709,34 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.worklist-link:hover .overlay,
-.worklist-link:focus .overlay {
+.worklist-gallery__link:hover .worklist-wrapper__overlay,
+.worklist-gallery__link:focus .worklist-wrapper__overlay {
   transform: translateY(0%);
 }
 
-.footer-section {
+.worklist-border {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+.worklist-border__head {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-color);
+}
+
+.worklist-border__desc {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
+
+.footer {
   padding: 60px 0;
   background-color: var(--fourth-color);
 }
@@ -739,18 +750,7 @@ body {
   margin-right: 70px;
 }
 
-.footer-logo {
-  display: inline-block;
-  margin-bottom: 20px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: var(--third-color);
-}
-
-.address-link {
+.footer-contact__address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -758,7 +758,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-link {
+.footer-contact__list {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -766,12 +766,12 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-address {
+.address {
   font-style: inherit;
 }
 
-.footer-address .link:hover,
-.footer-address .link:focus {
+.address .link:hover,
+.address .link:focus {
   color: var(--accent-color);
 }
 
@@ -779,7 +779,7 @@ body {
   margin-bottom: 9px;
 }
 
-.footer-icon-head {
+.footer-social__header {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -789,15 +789,19 @@ body {
   color: var(--third-color);
 }
 
-.footer-social-icon-list {
+.footer-social-list {
   display: flex;
 }
 
-.footer-icon-list:not(:last-child) {
+.footer-social-list__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.footer-icon-link {
+.footer-social-list__icon {
+  fill: currentColor;
+}
+
+.footer-social-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -809,19 +813,15 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-icon-link:hover, .footer-icon-link:focus {
+.footer-social-list__link:hover, .footer-social-list__link:focus {
   background-color: var(--accent-color);
 }
 
-.footer-social-icon {
-  fill: currentColor;
-}
-
-.footer-subscribe {
+.subscribe {
   margin-left: 93px;
 }
 
-.head-subscribe {
+.subscribe__header {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -831,12 +831,12 @@ body {
   color: var(--third-color);
 }
 
-.form-subscribe {
+.subscribe-form {
   display: flex;
   align-items: center;
 }
 
-.input-subscribe {
+.subscribe__input {
   padding-left: 16px;
   margin-right: 12px;
   width: 358px;
@@ -849,14 +849,14 @@ body {
   background-color: var(--fourth-color);
 }
 
-.input-subscribe::placeholder {
+.subscribe__input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.btn-subscribe {
+.subscribe-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -874,12 +874,12 @@ body {
   cursor: pointer;
 }
 
-.btn-subscribe:hover, .btn-subscribe:focus {
+.subscribe-btn:hover, .subscribe-btn:focus {
   background: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.icon-subscribe {
+.subscribe-btn__icon {
   margin-left: 10px;
 }
 /*# sourceMappingURL=main.css.map */
